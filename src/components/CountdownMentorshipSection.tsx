@@ -70,17 +70,17 @@ export const CountdownMentorshipSection: React.FC<CountdownMentorshipSectionProp
             ))}
           </div>
 
-          <div className="mt-14 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-14 flex w-full flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
             <button
               onClick={() => onOpenRsvpModal?.(UPCOMING_EVENTS[0])}
-              className="group inline-flex items-center gap-2.5 bg-champagne px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-on-accent transition-colors hover:bg-[#e8d9b5]"
+              className="group inline-flex w-full items-center justify-center gap-2.5 bg-champagne px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-on-accent transition-colors hover:bg-[#e8d9b5] sm:w-auto"
             >
               Secure official seat
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </button>
             <button
               onClick={() => onNavigateToAllEvents?.()}
-              className="inline-flex items-center gap-2 border border-line px-8 py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-mist transition-colors hover:border-champagne/40 hover:text-champagne-soft"
+              className="inline-flex w-full items-center justify-center gap-2 border border-line px-8 py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-mist transition-colors hover:border-champagne/40 hover:text-champagne-soft sm:w-auto"
             >
               Full event calendar
             </button>

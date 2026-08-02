@@ -65,7 +65,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <p className="mt-4 font-display text-lg tracking-[0.12em] text-[#e8d9b5] sm:text-xl">
             Arshman Ali Khan
           </p>
-          <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.36em] text-[#6a9a7c]">
+          <p className="mt-2 max-w-[18rem] text-[10px] font-medium uppercase leading-relaxed tracking-[0.22em] text-[#6a9a7c] sm:max-w-none sm:text-[11px] sm:tracking-[0.36em]">
             Events · Experiences · National Platforms
           </p>
 
@@ -94,17 +94,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </motion.div>
           </AnimatePresence>
 
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-10 flex w-full flex-col gap-3 sm:flex-row sm:items-center">
             <button
               onClick={() => onOpenRsvpModal(currentEvent)}
-              className="group inline-flex items-center justify-center gap-2.5 bg-champagne px-8 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-on-accent transition-colors hover:bg-[#e8d9b5]"
+              className="group inline-flex w-full items-center justify-center gap-2.5 bg-champagne px-8 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-on-accent transition-colors hover:bg-[#e8d9b5] sm:w-auto"
             >
               Official RSVP
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </button>
             <button
               onClick={onExploreEcosystems}
-              className="inline-flex items-center justify-center gap-2 border border-[#c5a059]/40 bg-transparent px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] text-[#e8d9b5] transition-colors hover:border-[#c5a059] hover:bg-[#c5a059]/10"
+              className="inline-flex w-full items-center justify-center gap-2 border border-[#c5a059]/40 bg-transparent px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] text-[#e8d9b5] transition-colors hover:border-[#c5a059] hover:bg-[#c5a059]/10 sm:w-auto"
             >
               Institutional Ecosystems
             </button>

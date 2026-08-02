@@ -32,7 +32,7 @@ export const ArshLogo: React.FC<ArshLogoProps> = ({
       <img
         src={src}
         alt="Arsh Events & Experiences"
-        className={`h-14 w-auto object-contain sm:h-16 ${className}`}
+        className={`h-10 w-auto max-w-[140px] object-contain sm:h-14 sm:max-w-[180px] ${className}`}
       />
     );
   }

@@ -98,7 +98,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-ink text-paper font-sans">
+    <div className="min-h-screen overflow-x-hidden bg-ink text-paper font-sans">
       <Navbar
         currentView={currentView}
         activeSection={activeSection}

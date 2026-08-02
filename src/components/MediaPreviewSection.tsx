@@ -29,7 +29,7 @@ export const MediaPreviewSection: React.FC<MediaPreviewSectionProps> = ({ onOpen
           <button
             type="button"
             onClick={onOpenMediaPage}
-            className="group inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-champagne transition-colors hover:text-champagne-soft"
+            className="group inline-flex w-full items-center justify-center gap-2 border border-champagne/40 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-champagne transition-colors hover:bg-champagne/10 hover:text-champagne-soft sm:w-auto sm:border-0 sm:px-0 sm:py-0 sm:justify-start"
           >
             View full archive
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
