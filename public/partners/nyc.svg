@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" fill="none">
+  <circle cx="30" cy="40" r="20" stroke="#3B6B54" stroke-width="1.5"/>
+  <text x="30" y="45" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#3B6B54">NY</text>
+  <text x="62" y="36" font-family="Georgia, serif" font-size="13" fill="#A8B3AC" letter-spacing="1">NATIONAL</text>
+  <text x="62" y="52" font-family="system-ui,sans-serif" font-size="8" fill="#6B756F" letter-spacing="1.2">YOUTH COUNCIL</text>
+</svg>

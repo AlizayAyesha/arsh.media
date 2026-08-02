@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <rect x="8" y="18" width="44" height="44" rx="2" stroke="#C5A059" stroke-width="1.5"/>
+  <text x="30" y="47" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#C5A059" font-weight="600">P</text>
+  <text x="66" y="38" font-family="Georgia, serif" font-size="15" fill="#A8B3AC" letter-spacing="2">PEMRA</text>
+  <text x="66" y="54" font-family="system-ui,sans-serif" font-size="8" fill="#6B756F" letter-spacing="1.5">PARTNERS</text>
+</svg>

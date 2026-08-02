@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+
+  --color-ink: var(--ink);
+  --color-ink-elevated: var(--ink-elevated);
+  --color-ink-soft: var(--ink-soft);
+  --color-forest: var(--forest);
+  --color-forest-bright: var(--forest-bright);
+  --color-champagne: var(--champagne);
+  --color-champagne-soft: var(--champagne-soft);
+  --color-mist: var(--mist);
+  --color-paper: var(--paper);
+  --color-line: var(--line);
+  --color-on-accent: var(--on-accent);
+  --color-media: #0a100e;
+}
+
+/* Dark theme (default) — matches logo on black */
+:root,
+.dark {
+  --ink: #0a100e;
+  --ink-elevated: #111916;
+  --ink-soft: #1a2420;
+  --forest: #3b6b54;
+  --forest-bright: #4d8568;
+  --champagne: #c5a059;
+  --champagne-soft: #e8d9b5;
+  --mist: #a8b3ac;
+  --paper: #f4f0e8;
+  --line: rgba(197, 160, 89, 0.22);
+  --on-accent: #0a100e;
+  color-scheme: dark;
+}
+
+/* Light theme — matches cream logo artwork */
+.light {
+  --ink: #f7f3eb;
+  --ink-elevated: #fffcf5;
+  --ink-soft: #ebe4d6;
+  --forest: #1a3326;
+  --forest-bright: #3b6b54;
+  --champagne: #c5a059;
+  --champagne-soft: #8f7340;
+  --mist: #5c6b62;
+  --paper: #1a3326;
+  --line: rgba(26, 51, 38, 0.14);
+  --on-accent: #0a100e;
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--ink);
+    color: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.35s ease, color 0.35s ease;
+  }
+
+  ::selection {
+    background: var(--forest);
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+
+  /* Hero sits on photography — always use dark-surface text */
+  .hero-on-media {
+    --paper: #f4f0e8;
+    --mist: #c5cdc8;
+    --champagne-soft: #e8d9b5;
+    --forest-bright: #6a9a7c;
+    --line: rgba(197, 160, 89, 0.28);
+  }
+
+  .partners-marquee {
+    animation: partners-scroll 42s linear infinite;
+  }
+
+  .partners-marquee:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes partners-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.light .partner-logo {
+  filter: brightness(0.75) contrast(1.15);
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Remix Arsh Media Ecosystem Showcase",
+  "description": "Official interactive product showcase and portfolio for Arsh Media\u0027s suite of multi-tier platform applications and AI mobile products.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
