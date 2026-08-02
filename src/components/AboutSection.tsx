@@ -4,9 +4,24 @@ import { motion } from 'motion/react';
 export const AboutSection: React.FC = () => {
   const stats = [
     { value: '15M+', label: 'Audience reach' },
-    { value: '10K+', label: 'People mentored' },
-    { value: '100+', label: 'Events produced' },
+    { value: '10K+', label: 'Leaders mentored' },
+    { value: '100+', label: 'National events' },
     { value: '50+', label: 'Dignitaries hosted' },
+  ];
+
+  const pillars = [
+    {
+      title: 'National convening',
+      text: 'Summits and assemblies that place youth, media, and policy in the same room — with protocol that earns trust.',
+    },
+    {
+      title: 'Mentorship at scale',
+      text: 'Direct guidance that turns potential into public work: stages booked, studios launched, careers secured.',
+    },
+    {
+      title: 'Institutional platforms',
+      text: 'Eight ecosystems built to carry broadcast, creation, and civic infrastructure beyond a single event.',
+    },
   ];
 
   return (
@@ -24,17 +39,20 @@ export const AboutSection: React.FC = () => {
           >
             <div className="relative overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80"
-                alt="Arsh — Founder of Arsh Media"
-                className="aspect-[4/5] w-full object-cover"
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80"
+                alt="Arshman Ali Khan"
+                className="aspect-[4/5] w-full object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-media via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-media via-transparent to-transparent opacity-85" />
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                 <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-[#c5a059]">
-                  Founder &amp; Chairman
+                  Founder &amp; Chairman · Arsh Media
                 </p>
                 <p className="mt-1 font-display text-2xl text-[#f4f0e8] sm:text-3xl">
                   Arshman Ali Khan
+                </p>
+                <p className="mt-1 text-xs text-[#c5cdc8]">
+                  Event architect · Mentor · Institutional builder
                 </p>
               </div>
             </div>
@@ -48,19 +66,19 @@ export const AboutSection: React.FC = () => {
             className="lg:col-span-7"
           >
             <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-forest-bright">
-              About Arsh
+              The mandate
             </p>
-            <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-medium leading-[1.15] text-balance text-paper">
-              Event organizer. Mentor. Builder of rooms that change careers.
+            <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-medium leading-[1.12] text-balance text-paper">
+              Building rooms where the nation meets its next chapter.
             </h2>
             <p className="mt-6 max-w-xl text-base font-light leading-relaxed text-mist sm:text-lg">
-              Arshman Ali Khan produces high-impact summits and experiences across Pakistan and the
-              GCC — and personally mentors thousands of creators, producers, and young leaders to
-              find their stage, grow their audience, and achieve what they once thought was out of
-              reach.
+              Arshman Ali Khan leads Arsh Events &amp; Experiences — producing high-stakes national
+              summits and mentorship programs that have guided thousands of creators, producers, and
+              young leaders across Pakistan and the GCC. His work sits at the intersection of
+              public presence, media power, and institutional delivery.
             </p>
 
-            <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-8 border-t border-line pt-10 sm:grid-cols-4">
+            <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-8 border-y border-line py-10 sm:grid-cols-4">
               {stats.map((stat) => (
                 <div key={stat.label}>
                   <p className="font-display text-3xl text-champagne-soft sm:text-4xl">{stat.value}</p>
@@ -71,21 +89,13 @@ export const AboutSection: React.FC = () => {
               ))}
             </div>
 
-            <div className="mt-12 grid gap-6 sm:grid-cols-2">
-              <div className="border-l border-champagne/40 pl-5">
-                <p className="text-sm font-medium text-paper">Mentorship that sticks</p>
-                <p className="mt-2 text-sm font-light leading-relaxed text-mist">
-                  One-to-one guidance and cohorts that turn ambition into published work, booked
-                  stages, and sustainable careers.
-                </p>
-              </div>
-              <div className="border-l border-forest/50 pl-5">
-                <p className="text-sm font-medium text-paper">Events with presence</p>
-                <p className="mt-2 text-sm font-light leading-relaxed text-mist">
-                  Summits, galas, and broadcasts designed so every guest leaves with clarity,
-                  connections, and momentum.
-                </p>
-              </div>
+            <div className="mt-10 grid gap-8 sm:grid-cols-3">
+              {pillars.map((p) => (
+                <div key={p.title} className="border-t border-champagne/30 pt-4">
+                  <p className="text-sm font-medium text-paper">{p.title}</p>
+                  <p className="mt-2 text-sm font-light leading-relaxed text-mist">{p.text}</p>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>

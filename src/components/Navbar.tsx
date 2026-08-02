@@ -153,10 +153,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           </button>
 
           <button
-            onClick={() => onSwitchView('funder')}
+            onClick={() => onSwitchView('events')}
             className="hidden bg-champagne px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-on-accent transition-colors hover:bg-[#e8d9b5] sm:inline-flex"
           >
-            Become a Funder
+            Official RSVP
           </button>
 
           <button

@@ -59,10 +59,11 @@ export const EcosystemShowcase: React.FC<EcosystemShowcaseProps> = ({
             Institutional architecture
           </p>
           <h2 className="mt-4 font-display text-[clamp(2.25rem,5vw,3.75rem)] font-medium leading-none text-paper">
-            Our Ecosystems
+            Eight ecosystems
           </h2>
           <p className="mt-5 max-w-lg text-base font-light leading-relaxed text-mist">
-            Eight sovereign platforms spanning media, AI, creation, and broadcast technology.
+            Sovereign platforms that extend the mandate — media, AI, creation, and civic
+            infrastructure beyond a single summit.
           </p>
         </div>
 

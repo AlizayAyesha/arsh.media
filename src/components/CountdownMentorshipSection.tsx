@@ -36,7 +36,7 @@ export const CountdownMentorshipSection: React.FC<CountdownMentorshipSectionProp
 
   return (
     <section id="summit" className="relative bg-ink py-24 sm:py-32">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(197,160,89,0.08),transparent_60%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(197,160,89,0.1),transparent_60%)] pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <motion.div
@@ -44,44 +44,45 @@ export const CountdownMentorshipSection: React.FC<CountdownMentorshipSectionProp
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.7 }}
-          className="border border-line bg-ink-elevated px-6 py-12 text-center sm:px-12 sm:py-16"
+          className="border border-champagne/35 bg-ink-elevated px-6 py-14 text-center sm:px-14 sm:py-20"
         >
-          <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-champagne">
-            Flagship summit
+          <p className="text-[11px] font-medium uppercase tracking-[0.36em] text-champagne">
+            National convening
           </p>
-          <h2 className="mt-4 font-display text-[clamp(1.75rem,4vw,3rem)] font-medium text-paper">
+          <h2 className="mt-5 font-display text-[clamp(1.85rem,4.5vw,3.25rem)] font-medium leading-tight text-paper">
             Arsh National Media &amp; AI Summit 2026
           </h2>
-          <p className="mt-3 text-sm font-light text-mist">
-            September 18, 2026 · Jinnah Convention Centre, Islamabad
+          <p className="mx-auto mt-4 max-w-xl text-sm font-light leading-relaxed text-mist">
+            The year’s defining assembly of media directors, policymakers, and young leaders —
+            Jinnah Convention Centre, Islamabad · 18 September 2026
           </p>
 
-          <div className="mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-3 sm:gap-6">
+          <div className="mx-auto mt-14 grid max-w-2xl grid-cols-4 gap-3 sm:gap-8">
             {units.map((unit) => (
               <div key={unit.label}>
                 <p className="font-display text-3xl text-champagne-soft sm:text-5xl">
                   {String(unit.value).padStart(2, '0')}
                 </p>
-                <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.22em] text-mist">
+                <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.24em] text-mist">
                   {unit.label}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-14 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <button
               onClick={() => onOpenRsvpModal?.(UPCOMING_EVENTS[0])}
-              className="group inline-flex items-center gap-2.5 bg-champagne px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-on-accent transition-colors hover:bg-[#e8d9b5]"
+              className="group inline-flex items-center gap-2.5 bg-champagne px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-on-accent transition-colors hover:bg-[#e8d9b5]"
             >
-              Reserve Summit Seat
+              Secure official seat
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </button>
             <button
               onClick={() => onNavigateToAllEvents?.()}
-              className="inline-flex items-center gap-2 border border-line px-7 py-3.5 text-[11px] font-medium uppercase tracking-[0.18em] text-mist transition-colors hover:border-champagne/40 hover:text-champagne-soft"
+              className="inline-flex items-center gap-2 border border-line px-8 py-4 text-[11px] font-medium uppercase tracking-[0.2em] text-mist transition-colors hover:border-champagne/40 hover:text-champagne-soft"
             >
-              View All Events
+              Full event calendar
             </button>
           </div>
         </motion.div>

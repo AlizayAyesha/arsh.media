@@ -7,6 +7,7 @@ interface HeroSectionProps {
   onOpenSpeakerModal: (event: UpcomingEvent) => void;
   onOpenRsvpModal: (event: UpcomingEvent) => void;
   onExploreEcosystems: () => void;
+  onOpenMedia?: () => void;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
@@ -29,7 +30,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       id="hero"
       className="hero-on-media relative flex min-h-[100svh] flex-col justify-end overflow-hidden"
     >
-      {/* Full-bleed event imagery — overlays stay dark in both themes */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
           <motion.img
@@ -43,8 +43,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             className="absolute inset-0 h-full w-full object-cover"
           />
         </AnimatePresence>
-        <div className="absolute inset-0 bg-gradient-to-t from-media via-media/80 to-media/40" />
-        <div className="absolute inset-0 bg-gradient-to-r from-media/85 via-media/45 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-media via-media/85 to-media/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-media/90 via-media/50 to-transparent" />
         <div className="grain absolute inset-0 opacity-40 mix-blend-overlay pointer-events-none" />
       </div>
 
@@ -55,15 +55,26 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl"
         >
-          {/* Brand — hero-level signal */}
-          <p className="font-display text-[clamp(3.5rem,12vw,7.5rem)] font-medium leading-[0.85] tracking-[0.08em] text-champagne-soft">
-            ARSH
-          </p>
-          <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.42em] text-forest-bright sm:text-xs">
-            Events &amp; Experiences
+          <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-[#c5a059] sm:text-[11px]">
+            Official portfolio · Islamabad · GCC
           </p>
 
-          <div className="mt-10 h-px w-16 bg-champagne/50" />
+          <p className="mt-5 font-display text-[clamp(3.75rem,13vw,8rem)] font-medium leading-[0.82] tracking-[0.06em] text-[#f4f0e8]">
+            ARSH
+          </p>
+          <p className="mt-4 font-display text-lg tracking-[0.12em] text-[#e8d9b5] sm:text-xl">
+            Arshman Ali Khan
+          </p>
+          <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.36em] text-[#6a9a7c]">
+            Events · Experiences · National Platforms
+          </p>
+
+          <div className="mt-8 h-px w-20 bg-[#c5a059]/60" />
+
+          <p className="mt-8 max-w-xl text-base font-light leading-relaxed text-[#c5cdc8] sm:text-lg">
+            Convening leaders, producers, and the next generation — building stages that move policy,
+            culture, and careers across Pakistan and the region.
+          </p>
 
           <AnimatePresence mode="wait">
             <motion.div
@@ -72,39 +83,35 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.55 }}
-              className="mt-8"
+              className="mt-8 border-l border-[#c5a059]/45 pl-4"
             >
-              <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-mist">
-                {currentEvent.date} · {currentEvent.city}
+              <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-[#c5a059]">
+                Upcoming · {currentEvent.date} · {currentEvent.city}
               </p>
-              <h1 className="mt-3 font-display text-[clamp(1.75rem,4vw,2.75rem)] font-medium leading-[1.15] text-balance text-paper">
+              <h1 className="mt-2 font-display text-[clamp(1.35rem,3vw,1.85rem)] font-medium leading-snug text-[#f4f0e8]">
                 {currentEvent.title}
               </h1>
-              <p className="mt-4 max-w-xl text-base font-light leading-relaxed text-mist sm:text-lg">
-                {currentEvent.subtitle}
-              </p>
             </motion.div>
           </AnimatePresence>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <button
               onClick={() => onOpenRsvpModal(currentEvent)}
-              className="group inline-flex items-center justify-center gap-2.5 bg-champagne px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-on-accent transition-colors hover:bg-[#e8d9b5]"
+              className="group inline-flex items-center justify-center gap-2.5 bg-champagne px-8 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-on-accent transition-colors hover:bg-[#e8d9b5]"
             >
-              Reserve Your Seat
+              Official RSVP
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </button>
             <button
               onClick={onExploreEcosystems}
-              className="inline-flex items-center justify-center gap-2 border border-champagne/35 bg-transparent px-7 py-3.5 text-xs font-medium uppercase tracking-[0.18em] text-champagne-soft transition-colors hover:border-champagne hover:bg-champagne/10"
+              className="inline-flex items-center justify-center gap-2 border border-[#c5a059]/40 bg-transparent px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] text-[#e8d9b5] transition-colors hover:border-[#c5a059] hover:bg-[#c5a059]/10"
             >
-              Explore Ecosystems
+              Institutional Ecosystems
             </button>
           </div>
         </motion.div>
 
-        {/* Slide markers — quiet, not pills */}
-        <div className="mt-14 flex items-center gap-6">
+        <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/10 pt-6">
           <div className="flex items-center gap-2">
             {events.map((ev, idx) => (
               <button
@@ -112,16 +119,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 aria-label={`Show ${ev.title}`}
                 onClick={() => setCurrentSlide(idx)}
                 className={`h-px transition-all duration-500 ${
-                  currentSlide === idx
-                    ? 'w-10 bg-champagne'
-                    : 'w-5 bg-mist/30 hover:bg-mist/55'
+                  currentSlide === idx ? 'w-10 bg-[#c5a059]' : 'w-5 bg-white/25 hover:bg-white/45'
                 }`}
               />
             ))}
           </div>
-          <span className="font-display text-sm italic text-mist/70">
+          <span className="font-display text-sm italic text-white/50">
             {String(currentSlide + 1).padStart(2, '0')} / {String(events.length).padStart(2, '0')}
           </span>
+          <div className="hidden h-3 w-px bg-white/15 sm:block" />
+          <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-white/45">
+            15M+ reach · 10K+ mentored · 100+ national events
+          </p>
         </div>
       </div>
     </section>

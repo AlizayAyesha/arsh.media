@@ -16,14 +16,14 @@ export const MediaPreviewSection: React.FC<MediaPreviewSectionProps> = ({ onOpen
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
             <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-forest-bright">
-              On camera &amp; on stage
+              Record of the work
             </p>
             <h2 className="mt-4 font-display text-[clamp(2.25rem,5vw,3.75rem)] font-medium leading-none text-paper">
-              Media
+              Media &amp; addresses
             </h2>
             <p className="mt-5 max-w-lg text-base font-light leading-relaxed text-mist">
-              YouTube vlogs, podcasts, and speeches — watch the work, then book a session for your
-              channel or campus.
+              Keynotes, podcasts, and field vlogs — the public record of presence. Book Arsh for
+              your university, channel, or national forum.
             </p>
           </div>
           <button
@@ -31,7 +31,7 @@ export const MediaPreviewSection: React.FC<MediaPreviewSectionProps> = ({ onOpen
             onClick={onOpenMediaPage}
             className="group inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-champagne transition-colors hover:text-champagne-soft"
           >
-            Open media page
+            View full archive
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
           </button>
         </div>

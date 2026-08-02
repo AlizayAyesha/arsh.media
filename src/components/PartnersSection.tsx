@@ -9,7 +9,7 @@ export const PartnersSection: React.FC = () => {
     <section id="partners" className="overflow-hidden border-y border-line bg-ink-elevated py-14 sm:py-16">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <p className="text-center text-[11px] font-medium uppercase tracking-[0.32em] text-mist">
-          Stages &amp; partners trusted
+          Institutions &amp; stages of trust
         </p>
       </div>
 

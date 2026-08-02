@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
+import { AuthorityStrip } from './components/AuthorityStrip';
 import { StoriesSection } from './components/StoriesSection';
 import { StoriesPage } from './components/StoriesPage';
 import { StoryArticlePage } from './components/StoryArticlePage';
@@ -140,6 +141,8 @@ export default function App() {
             />
 
             <AboutSection />
+
+            <AuthorityStrip />
 
             <StoriesSection
               onOpenStory={openStory}

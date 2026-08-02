@@ -18,13 +18,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectEcosystem })
               <ArshLogo variant="full" className="max-w-[160px] sm:max-w-[180px]" />
             </button>
             <p className="mt-5 max-w-sm text-sm font-light leading-relaxed text-mist">
-              Premier Pakistani broadcasting, AI, and civic digital infrastructure — eight ecosystems
-              across Islamabad, Lahore, Karachi, and the GCC.
+              Official portfolio of Arshman Ali Khan — national events, mentorship at scale, and
+              institutional platforms across Pakistan and the GCC.
             </p>
             <div className="mt-6 space-y-2.5 text-sm text-mist">
               <div className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-forest-bright" />
-                <span>Arsh Media Towers, Blue Area, Islamabad</span>
+                <span>Secretariat · Blue Area, Islamabad</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="h-3.5 w-3.5 shrink-0 text-champagne" />
@@ -32,7 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectEcosystem })
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="h-3.5 w-3.5 shrink-0 text-champagne" />
-                <span>+92 (51) 8890-0000</span>
+                <span>+92 (51) 8890-0000 · Protocol &amp; RSVP</span>
               </div>
             </div>
           </div>
@@ -60,10 +60,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectEcosystem })
 
           <div className="lg:col-span-4">
             <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-champagne">
-              Secretariat bulletins
+              Official bulletins
             </p>
             <p className="mt-3 text-sm font-light text-mist">
-              Invitations to summits and speaker announcements.
+              Summit invitations, speaker announcements, and protocol notices.
             </p>
             <form
               onSubmit={(e) => {
@@ -130,7 +130,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectEcosystem })
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-line pt-8 text-xs text-mist sm:flex-row sm:items-center">
           <p>
-            © {new Date().getFullYear()} Arsh Media. All ecosystems protected.
+            © {new Date().getFullYear()} Arsh Media · Arshman Ali Khan. All rights reserved.
           </p>
           <div className="flex gap-5">
             <span className="cursor-pointer hover:text-champagne-soft">PEMRA Charter</span>

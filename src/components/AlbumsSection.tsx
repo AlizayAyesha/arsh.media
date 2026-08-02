@@ -26,13 +26,13 @@ export const AlbumsSection: React.FC<AlbumsSectionProps> = ({ onOpenAlbumsPage }
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
             <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-forest-bright">
-              Archive
+              Visual record
             </p>
             <h2 className="mt-4 font-display text-[clamp(2.25rem,5vw,3.75rem)] font-medium leading-none text-paper">
-              Event Albums
+              Event albums
             </h2>
             <p className="mt-5 max-w-lg text-base font-light leading-relaxed text-mist">
-              Moments from national summits, broadcast conclaves, and creator galas.
+              The official photographic archive of national summits, galas, and assemblies.
             </p>
           </div>
           {onOpenAlbumsPage && (

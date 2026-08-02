@@ -19,14 +19,14 @@ export const StoriesSection: React.FC<StoriesSectionProps> = ({ onOpenStory, onR
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
             <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-forest-bright">
-              Blog
+              Impact chronicle
             </p>
             <h2 className="mt-4 font-display text-[clamp(2.25rem,5vw,3.75rem)] font-medium leading-none text-paper">
-              Stories
+              Stories of ascent
             </h2>
             <p className="mt-5 max-w-lg text-base font-light leading-relaxed text-mist">
-              The stars we helped reach the sky — journeys from first meeting to stages, studios, and
-              careers that now light the way for others.
+              Documented journeys of those who rose under this mandate — from first meeting to
+              national stages and lasting institutions.
             </p>
           </div>
 
@@ -35,7 +35,7 @@ export const StoriesSection: React.FC<StoriesSectionProps> = ({ onOpenStory, onR
             onClick={onReadMore}
             className="group inline-flex items-center gap-2.5 bg-champagne px-7 py-3.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-on-accent transition-colors hover:bg-[#e8d9b5]"
           >
-            Read more
+            Read the archive
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
           </button>
         </div>
